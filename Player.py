@@ -12,3 +12,6 @@ class Player:
 
     def getSymbol(self):
         return self.symbol
+
+    def getName(self):
+        return self.name
