@@ -14,14 +14,17 @@ def main():
 
     game = Game(player1, player2, board)
 
-    while(game.hasWon() != True or game.isDraw() != True):
+    while(game.isDraw() != True):
         game.printBoard()
         currentPlayerMove = getValidMoveMove(game)
-
         game.makeMove(currentPlayerMove)
+        if(game.hasWon()):
+            game.printBoard()
+            print(game.getCurrentPlayer().getName() + " has Won!")
+            return
         game.updateCurrentPlayer()
 
-    print(game.getCurrentPlayer().getName() + " has Won!")
+    print("Draw !")
 
 def getValidMoveMove(game):
     move = int(raw_input(game.getCurrentPlayer().getName() + "'s turn :"))

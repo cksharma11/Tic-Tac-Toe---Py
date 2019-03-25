@@ -21,7 +21,6 @@ class Game:
     def hasWon(self):
         playerMoves = self.getCurrentPlayer().getMoves()
         return any(all(move in playerMoves for move in combination) for combination in self.winningCombinations)
-        return self.getCurrentPlayer().getMoves() in self.winningCombinations
 
     def isPlaceEmpty(self, position):
         return self.board.isPlaceEmpty(position-1)
