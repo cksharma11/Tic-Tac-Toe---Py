@@ -12,3 +12,6 @@ class Board:
 
     def isPlaceEmpty(self,position):
         return self.board[position] != ' '
+
+    def areAllPlaceOccupied(self):
+        return all(place != ' ' for place in self.board)

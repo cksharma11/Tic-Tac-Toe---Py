@@ -28,3 +28,6 @@ class Game:
     
     def printBoard(self):
         self.board.printBoard()
+
+    def isDraw(self):
+        return self.board.areAllPlaceOccupied()

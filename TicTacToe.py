@@ -4,12 +4,17 @@ from Game import Game
 
 def main():
     board = Board()
-    player1 = Player("Chandan", "X")
-    player2 = Player("Dheeraj", "O")
+    player1Name = raw_input("Enter First Player Name : ")
+    player2Name = raw_input("Enter Second Player Name : ")
+
+    player1 = Player(player1Name, "X")
+    player2 = Player(player2Name, "O")
+
+    showSymbols(player1Name, player2Name)
 
     game = Game(player1, player2, board)
 
-    while(game.hasWon() != True):
+    while(game.hasWon() != True or game.isDraw() != True):
         game.printBoard()
         currentPlayerMove = getValidMoveMove(game)
 
@@ -24,5 +29,9 @@ def getValidMoveMove(game):
             print("Place is already occupied!")
             move =  getValidMoveMove(game)
     return move
+
+def showSymbols(player1, player2):
+    print(player1 + "'s symbol is X")
+    print(player2 + "'s symbol is O")
 
 main()
