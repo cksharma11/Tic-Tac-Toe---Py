@@ -1,14 +1,14 @@
 class Player:
-    def __init__(name, symbol):
+    def __init__(self, name, symbol):
         self.name = name
         self.symbol = symbol
         self.moves = []
 
-    def makeMove(position):
+    def makeMove(self, position):
         self.moves.append(position)
 
-    def getMoves():
+    def getMoves(self):
         return self.moves
 
-    def getSymbol():
+    def getSymbol(self):
         return self.symbol

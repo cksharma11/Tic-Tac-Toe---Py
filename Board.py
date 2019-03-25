@@ -1,8 +1,6 @@
 class Board:
-    def __init__():
+    def __init__(self):
         self.board = ['','','','','','','','','']
 
-    def addSymbol(position, symbol):
+    def placeSymbol(self, position, symbol):
         self.board[position] = symbol
-
-    
