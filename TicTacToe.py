@@ -1,6 +1,6 @@
-from Board import Board
-from Player import Player
-from Game import Game
+from src.Board import Board
+from src.Player import Player
+from src.Game import Game
 
 def getValidMoveMove(game):
     move = int(raw_input(game.getCurrentPlayer().getName() + "'s turn :"))
